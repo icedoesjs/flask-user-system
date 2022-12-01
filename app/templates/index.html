@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+{% block content %}
+<head>
+  <title>{{config["WEBSITE_TITLE"]}}</title>
+</head>
+<body>
+  <div class="card text-center border-0" style="margin: auto; position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 50%; height: fit-content;">
+    <div class="card-body">
+      <h5 class="card-title">Pokemon Stats Viewer</h5>
+      <p class="card-text">See statistics about a specified pokemon and PokeAPI</p>
+      <a href="/viewer" class="btn btn-outline-primary" style="width: 20vw">Go to stats viewer</a>
+    </div>
+  </div>
+</body>
+
+
+{% endblock %}

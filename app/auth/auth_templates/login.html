@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+{% block content %}
+
+
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='signin.css')}}">
+</head>
+
+
+<div class="login-container">
+    <span><i class="fa-solid fa-child-reaching fa-2xl welcome-ico"></i></span>
+    <h1><strong>Welcome back</strong></h1>
+    <p class="signin-caption">Let's get you signed in</p>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+    <div class="input-group flex-nowrap box-sizing">
+        <span class="input-group-text bg-white" id="addon-wrapping"><i class="fa-solid fa-user"></i></span>
+        {{ form.username(class="form-control input-box", placeholder='Enter your username') }}
+    </div>
+
+    <div class="input-group flex-nowrap box-spacing box-sizing">
+        <span class="input-group-text bg-white" id="addon-wrapping"><i class="fa-solid fa-lock"></i></i></span>
+        {{ form.password(class="form-control input-box", placeholder='Enter your password') }}
+    </div>
+
+    <div class="text-container">
+        {{ form.submit(class="btn btn-primary btn-lg btn-spacing", value="Sign in")}}
+        <button type="button" class="btn btn-primary btn-lg btn-spacing signup-btn"><a style="text-decoration: none; color: white;" href="/signup"></a>Sign up</button>
+        <p class="help-text"><a href="">Forgot password?</a></p>
+        <p class="social-signin"><span>Login using socials</span></p>
+    <div class="btn-container">
+        <button type="button" class="btn social-btn"><i class="fa-brands fa-github"></i></i></button>
+        <button type="button" class="btn social-btn"><i class="fa-brands fa-facebook"></i></i></button>
+        <button type="button" class="btn social-btn"><i class="fa-brands fa-google"></i></button>
+    </div>
+    </div>  
+    </form>
+</div>
+{% endblock %}
